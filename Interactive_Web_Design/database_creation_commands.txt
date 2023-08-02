@@ -1,0 +1,54 @@
+CREATE TABLE volunteer(
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  first_name VARCHAR(100) NOT NULL
+  last_name VARCHAR(100) NOT NULL,
+  phone_number INT NOT NULL UNIQUE,
+  postcode TINYINT NOT NULL,
+  PRIMARY KEY(email)
+);
+
+CREATE TABLE time_slots (
+    time_slot_id INT NOT NULL AUTO_INCREMENT,
+    time_slot_name VARCHAR(50) NOT NULL UNIQUE,
+    PRIMARY KEY(time_slot_id)
+);
+
+INSERT INTO time_slots (time_slot_name) VALUES
+    ('Day 1, Morning'),
+    ('Day 1, Afternoon'),
+    ('Day 1, Night'),
+    ('Day 2, Morning'),
+    ('Day 2, Afternoon'),
+    ('Day 2, Night');
+
+CREATE TABLE volunteer_time_slot(
+  vol_time_slot_id INT NOT NULL AUTO_INCREMENT,
+  volunteer_email VARCHAR(100) NOT NULL,
+  time_id INT NOT NULL,
+  task_id INT NOT NULL AUTO_INCREMENT,
+  details VARCHAR(10000) NOT NULL,
+  PRIMARY KEY(vol_time_slot_id),
+  FORIEGN KEY(volunteer_email) REFERENCES volunteer(email),
+  FORIEGN KEY(time_id) REFERENCES time_slots(time_slot_id)
+);
+
+CREATE TABLE task (
+  task_id INT NOT NULL AUTO_INCREMENT,
+  task_name VARCHAR(100) UNIQUE
+  PRIMARY KEY(task_id)
+);
+
+INSERT INTO task (task_name) VALUES
+    ('Set Up'),
+    ('Admissions'),
+    ('Cleaning'),
+    ('Crowd Control'),
+    ('Run Competition'),
+    ('Pack Up');
+
+CREATE TABLE organisers (
+  username VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(100) NOT NULL
+  PRIMARY KEY(username)
+);

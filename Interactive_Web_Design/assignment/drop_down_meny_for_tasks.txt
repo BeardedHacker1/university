@@ -1,0 +1,13 @@
+<br><span><strong>Add a timeslot: </strong></span></span><select name="time_id"></br>
+        <br><option value="" disabled>Select a timeslot</option>
+        <?php  
+        // Select details of all timeslots
+        $result = $db->query("SELECT * FROM time_slots ORDER BY time_slot_id");
+            
+        // Loop through each forum to generate an option of the drop-down list
+        foreach($result as $row)
+        {
+        $text = $time['time_id'] == $row['time_id'] ? 'selected' : '';
+        echo '<option value="'.$row['time_id'].'" '.text.'>'.$row['time_slot_name'].'</option>';
+        }
+       ?>

@@ -1,0 +1,39 @@
+.fieldset-container {
+  width: 300px; 
+}
+
+fieldset {
+    width: 350px;
+	margin-left: 20px;
+	margin-bottom: 20px;;
+}
+
+sup {
+    color: red;
+}
+
+* {
+	font-family: Arial
+}
+
+legend {
+	font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.middle {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+fieldset span {
+    float: left;
+    width: 150px;
+}

@@ -1,0 +1,12 @@
+span {
+    font-weight: bold;
+}
+
+* {
+    font-family: Arial;
+}
+
+textarea {
+    width: 400px;
+    height: 200px;
+}

@@ -1,0 +1,52 @@
+/* Control width and margins of fieldsets */
+fieldset{
+    width: 50%;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+	margin-bottom: 20px;
+    background-color: #E9F6FF ;
+    border: 2px solid black;
+    padding: 8px;
+}
+
+/* Styling drop down list */
+select{
+    color: white;
+    background-color: darkcyan;
+    overflow: visible;
+    margin-left: 10px;
+} 
+
+/* Styling buttons */
+input[type="submit"], button{
+    overflow: visible;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: darkcyan;
+}
+
+/* Styling table */
+table {
+    /*border-collapse: collapse;*/
+    width: 100%;
+}
+
+/* Styling Table Headings */
+th{
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+    background-color: darkcyan;
+    color: white;
+}
+
+/* Styling Table Contents */
+td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+    background-color: lightgrey;
+}

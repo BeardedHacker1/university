@@ -1,0 +1,6 @@
+Things that need to be fixed before submission 
+
+Fix dob checker on register.php form handler 
+
+Fix filtering for threads
+

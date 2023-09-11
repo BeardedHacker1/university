@@ -1,0 +1,73 @@
+/*control height of tables*/
+table {
+  height: 230px;
+}
+
+/*control width of rows*/
+td {
+  width: 50%;
+}
+/*control height of rows*/
+tr {
+  height: 25%;
+}
+
+/* Control width and margins of fieldsets */  
+fieldset{
+  width: 90%;
+  height: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+	margin-bottom: 20px;
+  background-color: #E9F6FF ; 
+}
+
+h1 {
+  position: relative;
+  left: 280px;
+}
+
+/* Make legend text bold */
+legend {
+	font-weight: bold;
+  font-size: 22px;
+  color:darkcyan
+}
+
+/* Make superscript tags red */
+sup {
+	color: #FF0000;
+}
+
+/* Make labels "blocks" rather than "inline" */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Set width for text fields, password fields and drop-down lists*/
+input[type="text"], input[type="password"], select {
+	width: 200px;
+}
+
+/*style submit buttons*/
+input[type="submit"], select {
+  width: 100px;
+  height:25px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  background-color: darkcyan;
+}
+
+/* Used to center things horizontally */
+.middle {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+

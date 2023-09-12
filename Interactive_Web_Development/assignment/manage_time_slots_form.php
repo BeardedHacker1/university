@@ -1,7 +1,7 @@
 <?php 
 require 'db_connect.php';
 
-// Is volunteer is not logged in redirect to login page
+// If volunteer is not logged in redirect to login page
 if (!isset($_SESSION['user']))
 {
   header('Location: login_form.php');
@@ -72,13 +72,19 @@ if ($_SESSION['level'] !== 'volunteer')
       </table></br>
       <form name="manage_time_slots_form" method="post" action="add_timeslot_processing.php">
         <select name="timeslot">
-            <option value="" selected disabled>Select a timeslot</option>    
-            <option value="1">Day 1, Morning</option>
-            <option value="2">Day 1, Afternoon</option>
-            <option value="3">Day 1, Night</option>
-            <option value="4">Day 2, Morning</option>
-            <option value="5">Day 2, Afternoon</option>
-            <option value="6">Day 2, Night</option>
+          <option value="" selected disabled>Select a timeslot</option>
+          <?php
+            // Fetch time_slot_id and time_slot_name from the time_slots table ordered by time_slot_id
+            $stmt = $db->prepare('SELECT time_slot_id, time_slot_name FROM time_slots ORDER BY time_slot_id');
+            $stmt->execute();
+
+            while ($row = $stmt->fetch())
+            {
+              $time_slot_id = $row['time_slot_id'];
+              $time_slot_name = $row['time_slot_name'];
+              echo "<option value=\"$time_slot_id\">$time_slot_name</option>";
+            }
+          ?>
         </select>
         <input type="submit" name="add_time_slot" value="Add" />
       </form>

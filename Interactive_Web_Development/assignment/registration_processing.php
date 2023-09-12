@@ -1,6 +1,6 @@
 <?php
 require 'db_connect.php';
-// If the request includes form data...
+
 if (isset($_POST['register']))
 { // Validate and process the form
 
